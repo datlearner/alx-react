@@ -1,5 +1,14 @@
-export const getFullYear = () => new Date().getFullYear();
+import { getFullYear, getFooterCopy, getLatestNotification } from "./utils";
 
-export const getFooterCopy = (isIndex) => (isIndex ? "Holberton School" : "Holberton School main dashboard");
+test("returns current year", () => {
+  expect(getFullYear()).toBe(2022);
+});
 
-export const getLatestNotification = () => "<strong>Urgent Requirement</strong> - complete by EOD";
+test("correct footer copy", () => {
+  expect(getFooterCopy(true)).toBe("Holberton School");
+  expect(getFooterCopy(false)).toBe("Holberton School main dashboard");
+});
+
+test("returns right notification", () => {
+  expect(getLatestNotification()).toBe("<strong>Urgent Requirement</strong> - complete by EOD");
+});
