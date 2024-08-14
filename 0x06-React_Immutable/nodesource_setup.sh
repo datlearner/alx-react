@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Discussion, issues and change requests at:
