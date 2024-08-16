@@ -58,13 +58,16 @@ class App extends React.Component {
   }
 
   render() {
+    // Destructure state
+    const { displayDrawer } = this.state;
+
     return (
       <React.Fragment>
         <div className={css(styles.App)}>
           <div className="heading-section">
             <Notifications
               listNotifications={this.listNotifications}
-              displayDrawer={this.state.displayDrawer}
+              displayDrawer={displayDrawer}
               handleDisplayDrawer={this.handleDisplayDrawer}
               handleHideDrawer={this.handleHideDrawer}
             />
