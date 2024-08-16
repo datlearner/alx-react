@@ -1,3 +1,5 @@
+// src/App/App.js
+
 import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -58,7 +60,6 @@ class App extends React.Component {
   }
 
   render() {
-    // Destructure state
     const { displayDrawer } = this.state;
 
     return (
